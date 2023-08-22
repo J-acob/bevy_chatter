@@ -1,0 +1,52 @@
+[target.x86_64-pc-windows-msvc]
+linker = "lld"
+rustflags = [
+    "-Zshare-generics=no",
+    "-Lnative=/opt/xwin/crt/lib/x86_64",
+    "-Lnative=/opt/xwin/sdk/lib/um/x86_64",
+    "-Lnative=/opt/xwin/sdk/lib/ucrt/x86_64"
+]
+
+[target.x86_64-pc-windows-gnu]
+linker = "lld"
+rustflags = [
+# TODO
+]
+
+[target.x86_64-unknown-linux-gnu]
+linker = "clang"
+rustflags = [
+    "-C", 
+    "link-arg=-fuse-ld=/usr/bin/mold",
+]
+
+[target.wasm32-unknown-unknown]
+runner = "wasm-server-runner"
+
+# Change if needed
+[env]
+WGPU_BACKEND="vulkan"
+
+[alias]
+build_windows = "build_windows_msvc" # Acts as a 'default'
+build_windows_release = "build_windows --no-default-features --release"
+build_windows_msvc = "build --target=x86_64-pc-windows-msvc --no-default-features"
+build_windows_mingw = "build --target=x86_64-pc-windows-gnu --no-default-features"
+build_windows_mingw_release = "build --target=x86_64-pc-windows-gnu --release --no-default-features "
+
+build_linux = "build --target=x86_64-unknown-linux-gnu"
+build_linux_release = "build_linux --release --no-default-features"
+
+build_web = "build --target wasm32-unknown-unknown --no-default-features"
+build_web_release = "build_web --release"
+
+run_windows = "run_windows_msvc"
+run_windows_release = "run_windows --no-default-features --release"
+run_windows_msvc = "run --target=x86_64-pc-windows-msvc --no-default-features"
+run_windows_mingw = "run --target=x86_64-pc-windows-gnu --no-default-features"
+
+run_linux = "run --target=x86_64-unknown-linux-gnu"
+run_linux_release = "run_linux --no-default-features --release"
+
+run_web = "run --target wasm32-unknown-unknown --no-default-features"
+run_web_release = "run_web --release"
