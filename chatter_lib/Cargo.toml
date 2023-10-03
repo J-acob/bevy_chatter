@@ -1,0 +1,19 @@
+[package]
+name = "chatter_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+#bevy = { version = "0.11.2"}
+bevy = {git = "https://github.com/J-acob/bevy.git", branch = "device_arc_clone", version = "0.11"}
+bevy_egui = {git = "https://github.com/J-acob/bevy_egui.git", branch = "custom_render"}
+fastrand = "2.0.0"
+itertools = "0.11.0"
+memmap2 = "0.7.1"
+web-rwkv = "0.1"
+
+
+[features]
+#default = ["fast-compile"]
+#fast-compile = ["bevy/dynamic_linking"]
+

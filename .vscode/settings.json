@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./chatter_lib/Cargo.toml",
+        "./chatter_lib/Cargo.toml"
+    ]
+}

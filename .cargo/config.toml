@@ -22,6 +22,9 @@ rustflags = [
 
 [target.wasm32-unknown-unknown]
 runner = "wasm-server-runner"
+rustflags = ["--cfg=web_sys_unstable_apis"]
+#rustflags = ["-C", "link-arg=--max-memory=4294967296"]
+
 
 # Change if needed
 [env]

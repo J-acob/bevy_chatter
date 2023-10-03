@@ -2,8 +2,8 @@
 resolver = "2"
 
 members = [
-    "template_game",
-    "template_lib",
+    "chatter_game",
+    "chatter_lib",
 ]
 
 # Enable a small amount of optimization in debug mode
