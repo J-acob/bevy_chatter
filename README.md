@@ -8,7 +8,7 @@ A very small example of running a llm within bevy.
 
 # NOTES
 
-- You'll need to download your own `RWKV-4-World-0.4B-v1-20230529-ctx4096.st` and place it into assets/models/ since it's too big to put onto github. You can easily get your own from [HERE](https://github.com/cryscan/web-rwkv/blob/main/assets/models/RWKV-4-World-0.4B-v1-20230529-ctx4096.st).
+- You'll need to download your own `RWKV-4-World-0.4B-v1-20230529-ctx4096.st` and place it into assets/models/ since it's too big to put onto github. You can easily get your own from [HERE](https://github.com/cryscan/web-rwkv/blob/main/assets/models/RWKV-4-World-0.4B-v1-20230529-ctx4096.st). The program expects this exact model to be used.
 
 --
 
