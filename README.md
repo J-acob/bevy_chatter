@@ -1,12 +1,18 @@
 # What is this?
 
-This is a minimalistic template meant for making games via bevy on wsl2. It is also set up to export to various platforms such as windows, linux, and web
+---
+
+A very small example of running a llm within bevy.
 
 ---
 
-# Dependencies
+# NOTES
 
-Yes - this template has a few dependencies. Since the aim of this is to be as minimalistic as possible all dependencies will have to be manually downloaded
+- You'll need to download your own `RWKV-4-World-0.4B-v1-20230529-ctx4096.st` and place it into assets/models/ since it's too big to put onto github. You can easily get your own from [HERE](https://github.com/cryscan/web-rwkv/blob/main/assets/models/RWKV-4-World-0.4B-v1-20230529-ctx4096.st).
+
+--
+
+# Dependencies
 
 Add the needed targets via `rustup`, currently supported are `x86_64-pc-windows-msvc`, `x86_64-pc-windows-gnu`,`x86_64-unknown-linux-gnu`, and `wasm32-unknown-unknown` (for web).
 
